@@ -9,7 +9,7 @@ export const useCart = () => {
         return localStorageCart ? JSON.parse(localStorageCart) : []
     }
 
-    const [data] = useState(db)
+   // const [data] = useState(db)
     const [cart, setCart] = useState(initialCart)
 
     const MIN_ITEMS = 1
@@ -71,9 +71,9 @@ export const useCart = () => {
     const cartTotal = useMemo( () => cart.reduce( (total, item ) => total + (item.quantity * item.price), 0), [cart] )
 
     return {
-        data,
+     //   data,
         cart,
-        addToCart,
+      //  addToCart,
         removeFromCart,
         decreaseQuantity,
         increaseQuantity,
